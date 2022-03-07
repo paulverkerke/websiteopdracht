@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+/*Tablet of contents*/
+/*1. Global Styles*/
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --lightpurple: #F2F0FF;
+    --lightgrey: #F3F6F9;
+    --gray: #7A7A7A;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*2. Typography*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', SansSerif;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+body {
+    font-family: 'Roboto', SansSerif;
+}
+
+
+p {
+    font-family: 'Roboto', SansSerif;
+    font-weight: 300;
+}
+
+
+/*3. Layout*/
+
+
+.content-container {
+    flex-basis: 710px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 150px;
+}
+
+
+button {
+    background-color: var(--pink);
+    color: var(--lightpurple);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    border-radius: 25px;
+    padding: 18px 32px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .25);
+}
+
+
+/*4. Areas*/
+
+/*4.1 Nav*/
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--purple);
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-basis: 400px;
+    justify-content: space-between;
+    list-style-type: none;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*4.2 Header*/
+
+header .content-container {
+    color: white;
+}
+
+header {
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid white;
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.squiggle {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 0;
+
+}
+
+/*4.3 Body*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*4.4 Section Intro*/
+
+.intro::before {
+    position: absolute;
+    content: "hello";
+    font-size: 500px;
+    font-weight: 800;
+    color: var(--lightpurple);
+    z-index: -1;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    z-index: -2;
+    color: var(--purple);
+}
+
+
+.intro div p {
+    color: black;
+    font-size: 14px;
+}
+
+.intro div p a {
+    text-decoration: 0;
+    color: blue;
+}
+
+.intro::after {
+    content: "";
+    position: absolute;
+    border-bottom: 40px solid var(--lightgrey);
+    border-right: 100vw solid transparent;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*4.5 Section Work*/
+
+
+.work::before {
+    position: absolute;
+    content: "work";
+    font-size: 500px;
+    font-weight: 800;
+    color: white;
+    z-index: -1;
+}
+
+.work {
+    display: flex;
+    justify-content: center;
+    background-color: var(--lightgrey);
+    z-index: -2;
+}
+
+.work article {
+    display: flex;
+    align-items: center;
+    max-width: 1300px;
+    margin: 150px;
+}
+
+.work article a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--blue);
+}
+
+.work article div {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.work article div p {
+    margin: 4rem 0 2rem 0;
+}
+
+
+.rowreverse {
+    flex-direction: row-reverse;
+}
+
+#imageshadow {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .25);
+}
+
+
+/*4.6 Section Services*/
+
+.services::before {
+    position: absolute;
+    content: "services";
+    font-size: 400px;
+    font-weight: 800;
+    color: var(--lightpurple);
+    z-index: -1;
+}
+
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white);
+    z-index: -2;
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services article {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    height: 400px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 20px;
+    border: 1px solid var(--purple);
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .25);
+
+}
+
+.services article a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--blue);
+}
+
+.services article div {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.services p {
+    font-size: 16px;
+    color: var(--gray);
+    margin: 3rem 0 2rem 0;
+
+}
+
+.services img {
+    max-height: 60px;
+}
+
+.services h2 {
+    color: var(--purple);
+}
+
+.margin {
+    margin: 10rem 0 20rem 0;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--purple);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    z-index: -2;
+    color: white;
+    flex-basis: 710px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+form {
+    text-align: left;
+}
+
+.contact p {
+    font-size: 16px;
+}
+
+.contact button p {
+    font-size: 12px;
+}
+
+textarea {
+    width: 22rem;
+}
+
+/*4.7 Section Contact*/
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    z-index: -2;
+    color: white;
+    max-height: 6rem;
+}
